@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>networkers</display-name>
+  <resource-ref>
+    <description>DB Connection</description>
+    <res-ref-name>jdbc/NetWorkers</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>ResetCheckMessagesTable</servlet-name>
+  	<servlet-class>messaging_servlets.ResetCheckMessagesTable</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CorrectCheckMessages</servlet-name>
+  	<servlet-class>messaging_servlets.CorrectCheckMessages</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DeleteConversation</servlet-name>
+  	<servlet-class>messaging_servlets.DeleteConversation</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CreateConversation</servlet-name>
+  	<servlet-class>messaging_servlets.CreateConversation</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoadConversations</servlet-name>
+    <servlet-class>messaging_servlets.LoadConversations</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>SendMMS</servlet-name>
+    <servlet-class>messaging_servlets.SendMMS</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>GetUserImage</servlet-name>
+    <servlet-class>account_servlets.GetUserImage</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>UpdatePic</servlet-name>
+  	<servlet-class>account_servlets.UpdatePic</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>GetMMS</servlet-name>
+  	<servlet-class>messaging_servlets.GetMMS</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>WhichUserUpdatedPic</servlet-name>
+  	<servlet-class>account_servlets.WhichUserUpdatedPic</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>SetUserImage</servlet-name>
+    <servlet-class>account_servlets.SetUserImage</servlet-class>
+  </servlet>
+    
+  <servlet>
+    <servlet-name>SetMessageRead</servlet-name>
+    <servlet-class>messaging_servlets.SetMessageRead</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>DetermineReadMessages</servlet-name>
+    <servlet-class>messaging_servlets.DetermineReadMessages</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>GetNewConversations</servlet-name>
+    <servlet-class>messaging_servlets.GetNewConversations</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>GetExistingProjects</servlet-name>
+    <servlet-class>project_servlets.GetExistingProjects</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>CheckMessagesTable</servlet-name>
+    <servlet-class>messaging_servlets.CheckMessagesTable</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>UpdateData</servlet-name>
+    <servlet-class>account_servlets.UpdateData</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetContractorList</servlet-name>
+    <servlet-class>project_servlets.GetContractorList</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GetUserInfo</servlet-name>
+    <servlet-class>account_servlets.GetUserInfo</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CreateProject</servlet-name>
+    <servlet-class>project_servlets.CreateProject</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoadMessages</servlet-name>
+    <servlet-class>messaging_servlets.LoadMessages</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SignOut</servlet-name>
+    <servlet-class>account_servlets.SignOut</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ValidateCookie</servlet-name>
+    <servlet-class>account_servlets.ValidateCookie</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SendMessage</servlet-name>
+    <servlet-class>messaging_servlets.SendMessage</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ReceiveMessage</servlet-name>
+    <servlet-class>messaging_servlets.ReceiveMessage</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>HelloForm</servlet-name>
+    <servlet-class>account_servlets.HelloForm</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CreateAccount</servlet-name>
+    <servlet-class>account_servlets.CreateAccount</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SignIn</servlet-name>
+    <servlet-class>account_servlets.SignIn</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>ResetCheckMessagesTable</servlet-name>
+  	<url-pattern>/resetcheckmessagestable</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>CorrectCheckMessages</servlet-name>
+  	<url-pattern>/correctcheckmessages</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DeleteConversation</servlet-name>
+  	<url-pattern>/deleteconversation</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CreateConversation</servlet-name>
+  	<url-pattern>/createconversation</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateAccount</servlet-name>
+    <url-pattern>/createaccount</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SignIn</servlet-name>
+    <url-pattern>/signin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ReceiveMessage</servlet-name>
+    <url-pattern>/receivemessage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SendMessage</servlet-name>
+    <url-pattern>/sendmessage</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HelloForm</servlet-name>
+    <url-pattern>/HelloForm</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet-mapping>
+    <servlet-name>SetMessageRead</servlet-name>
+    <url-pattern>/setmessageread</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet-mapping>
+    <servlet-name>GetExistingProjects</servlet-name>
+    <url-pattern>/getexistingprojects</url-pattern>
+  </servlet-mapping>
+  
+   <servlet-mapping>
+    <servlet-name>CheckMessagesTable</servlet-name>
+    <url-pattern>/checkmessagestable</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>GetMMS</servlet-name>
+    <url-pattern>/getmms</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>SignOut</servlet-name>
+    <url-pattern>/signout</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ValidateCookie</servlet-name>
+    <url-pattern>/validatecookie</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadMessages</servlet-name>
+    <url-pattern>/loadmessages</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>GetNewConversations</servlet-name>
+    <url-pattern>/getnewconversations</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>DetermineReadMessages</servlet-name>
+    <url-pattern>/determinereadmessages</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>LoadConversations</servlet-name>
+    <url-pattern>/loadconversations</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet-mapping>
+    <servlet-name>GetUserImage</servlet-name>
+    <url-pattern>/getuserimage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>UpdatePic</servlet-name>
+    <url-pattern>/updatepic</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>SetUserImage</servlet-name>
+    <url-pattern>/setuserimage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>SendMMS</servlet-name>
+    <url-pattern>/sendmms</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>WhichUserUpdatedPic</servlet-name>
+    <url-pattern>/whichuserupdatedpic</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>CreateProject</servlet-name>
+    <url-pattern>/createproject</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetContractorList</servlet-name>
+    <url-pattern>/getcontractorlist</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetUserInfo</servlet-name>
+    <url-pattern>/getuserinfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateData</servlet-name>
+    <url-pattern>/updatedata</url-pattern>
+  </servlet-mapping>
+</web-app>
